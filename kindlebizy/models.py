@@ -16,7 +16,9 @@ class Order(models.Model):
 
     Products = models.CharField(max_length=200,choices=pd,default="Frog",blank=False)
     quantity=models.PositiveIntegerField(default=1,blank=False)
-    text =models.TextField(max_length=200,null=False,blank=True)
+    text =models.TextField(max_length=200,null=False,blank=False)
+    Name=models.CharField(max_length=200,null=True,blank=False)
+    Email=models.EmailField(blank=False,null=True)
     def  __str__(self):
          return self.Products
     

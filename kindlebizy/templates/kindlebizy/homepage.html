@@ -1,4 +1,5 @@
 {% load staticfiles %}
+
 <DOCTYPE html>
     <html lang="en">
     <header class="header1">
@@ -74,13 +75,19 @@ Main material used: Fabric cloth can be ironed.
 Colors: Available in sky blue and fern green colors
 Durability: 2-3 years depending on the usage.</div>
 <div class="founder"><img src="{% static 'images/khalid hegazi.jpg' %}" alt="Khalid Hegazi"><div class="title"><label>Founder and CEO:Khalid Hegazi</label></div></div>
-<a href="#home" class="home"><button>Home</button></a>
+
               </div>
 <div class="products" id="order">
   <div class="order">
   <h1> Order</h1>
+  {% load widget_tweaks %}
 <form action='' method='POST' enctype='multipart/form-data'>
-    {% csrf_token %} {{ form.as_p }}
+  {% csrf_token %}
+  {% for form in form %}
+  {{form.labe}}<br/>
+     {{ form|add_class:"forms" }}
+     {% endfor %}
+
     <button type="submit">ORDER</button>
 </form>
 
@@ -119,9 +126,12 @@ Durability: 2-3 years depending on the usage.</div>
   </div>
 </div>
   </div>
- <a href="#home" class="home2"><button>Home</button></a>
 </div>
 
+<footer>
+  <div class="pow"><p>Developed and Powered by <a href="">gogitsolution</a></p></div>
+  <div class="top"> <p><a href="#home">TOP</a></p></div>
+</footer>
 
    </body>
      
