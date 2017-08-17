@@ -570,7 +570,7 @@ button{
   text-align: center;
   position: relative;
   color: white;
-
+z-index: 2;
   left:20%;
   
   
