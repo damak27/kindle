@@ -20,7 +20,7 @@ $(document).on('click', 'a', function(event){
 $(function() {
     if (window.matchMedia("(max-width:150px)" && "(max-width:680px)").matches) {
 
-        $('div.one').remove();
-        $('div.shield').remove();
+        $('div.left').remove();
+        $('div.right').remove();
     }
 });
