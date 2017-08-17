@@ -24,3 +24,18 @@ $(function() {
         $('div.right').remove();
     }
 });
+$(function() {
+    if (window.matchMedia("(max-width:150px)" && "(max-width:680px)").matches) {
+
+        $('nav.desktop').remove();
+        $('nav.mobile').add();
+        $('div.mainabout').remove();
+        $('div#order').remove();
+        $('div.order').remove();
+    }
+    else{
+         $('nav.desktop').add();
+        $('nav.mobile').remove();
+
+    }
+});
