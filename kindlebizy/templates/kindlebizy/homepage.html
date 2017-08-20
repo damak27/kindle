@@ -20,22 +20,22 @@
                    <nav class="desktop">
   <ul>
     <li><a href="#">Home</a></li>
-    <li><a href="#order"><span>Products</span></a></li>
-    <li><a href="#about"><span>About</span></a></li>
-    <li><a href="#"><span>Event</span></a></li>
-    <li><a href="#contact"><span>contact</span></a></li>
-    <li><a href="#order"><span>Order</span></a></li>
+    <li><a class="order1"href="#order"><span>Products</span></a></li>
+    <li><a class="about1" href="#about"><span>About</span></a></li>
+    <li><a  class="event1"href="#"><span>Event</span></a></li>
+    <li><a class ="order1" href="#contact"><span>contact</span></a></li>
+    <li><a class="order1" href="#order"><span>Order</span></a></li>
   </ul>
 
 </nav>
                    <nav class="mobile">
   <ul>
-    <li><a href="#">Home</a></li>
-    <li><a href="#"><span>Products</span></a></li>
-    <li><a href="#"><span>About</span></a></li>
+    <li><a href="{% url 'kindlebizy:Homepage' %}">Home</a></li>
+    <li><a href="{% url 'kindlebizy:order' %}"><span>Products</span></a></li>
+    <li><a href="{% url 'kindlebizy:about' %}"><span>About</span></a></li>
     <li><a href="#"><span>Event</span></a></li>
-    <li><a href="#contact"><span>contact</span></a></li>
-    <li><a href="#"><span>Order</span></a></li>
+    <li><a href="{% url 'kindlebizy:order' %}"><span>contact</span></a></li>
+    <li><a href="{% url 'kindlebizy:order' %}"><span>Order</span></a></li>
   </ul>
 
 </nav>
@@ -93,11 +93,12 @@ Durability: 2-3 years depending on the usage.</div>
   <h1> Order</h1>
   {% load widget_tweaks %}
 <form action='' method='POST' enctype='multipart/form-data'>
-  {% csrf_token %}
-  {% for form in form %}
-  {{form.labe}}<br/>
-     {{ form|add_class:"forms" }}
-     {% endfor %}
+   {% csrf_token %}
+  <label>Name:</label>{{form.Name|add_class:"forms"}}<br>
+  <label>Email:</label>{{ form.Email|add_class:"forms"}}<br>
+    <label>Products:</label> {{ form.Products|add_class:"forms" }}<br>
+    <label>Quantity:</label> {{form.quantity|add_class:"forms"}}<br>
+     <label>message:</label>{{form.text|add_class:"forms"}}<br>
 
     <button type="submit">ORDER</button>
 </form>
@@ -141,7 +142,7 @@ Durability: 2-3 years depending on the usage.</div>
 
 <footer>
   <div class="pow"><p>Developed and Powered by <a href="">gogitsolution</a></p></div>
-  <div class="top"> <p><a href="#home">TOP</a></p></div>
+  <div class="top"> <p><a class="home1" href="#home">TOP</a></p></div>
    <div class="contact" id="contact"> <p>WhatsApp:+20(109)-373-8252</p></div>
 </footer>
 

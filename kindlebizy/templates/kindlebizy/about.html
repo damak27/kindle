@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <header>
+        <title>About Kinder</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="description" content="Kindle|| Creative book for Children|| quiet Books ||Quiet Toys"/>
+        <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+         <link rel="stylesheet" href="{% static 'css/mainfile.css' %}"> 
+                            <nav class="mobile">
+ <ul>
+    <li><a href="{% url 'kindlebizy:Homepage' %}">Home</a></li>
+    <li><a href="{% url 'kindlebizy:order' %}"><span>Products</span></a></li>
+    <li><a href="{% url 'kindlebizy:about' %}"><span>About</span></a></li>
+    <li><a href="#"><span>Event</span></a></li>
+    <li><a href="{% url 'kindlebizy:order' %}"><span>contact</span></a></li>
+    <li><a href="{% url 'kindlebizy:order' %}"><span>Order</span></a></li>
+  </ul>
+
+</nav>
+    </div>
+    </header>
+         <body>
+                         <div class="aboutmobile"class="aboutmobile"><h1>About</h1>
+
+<p>Kinder Educational Tools Store is a unique company started in 2015 . Specialized in making durable and quality  handmade educational products .Such as  quiet books for kids .Our books helps kids to improve their creativity while keeping them active .Due to the durability of our products ,compared to most in the market ,you are rest assured our products has  long lasting life span .And  suitable for kids of all kind.Quality has always been our prime focus ,improving our product quality is a continuous journey .
+
+Our vision is to help all kids worldwide to be smart and creative.
+
+Our mission is to increase creative thinking and intelligence of more than 1 million kid worldwide through our unique handmade educational products.
+Our corporate core values:
+A commitment to creativity and Innovation, Kinder Educational Tools Store has the welling to be number one worldwide in creative and innovative handmade educational products for kids.
+
+Product name: Quiet Book for kids (3-6) years old
+Main material used: Fabric cloth can be ironed.
+Colors: Available in sky blue and fern green colors
+Durability: 2-3 years depending on the usage.</p></div>
+
+             <br/>
+<div class="foundermobile"><img src="{% static 'images/khalid hegazi.jpg' %}" alt="Khalid Hegazi"><div class="title"><label>Founder and CEO:Khalid Hegazi</label></div></div>
+
+         </body>
+</html>

@@ -17,6 +17,19 @@ def homeview(request):
              "events":queryset}
     return render(request,"kindlebizy/homepage.html",content)
 
-def popview(reques):
+def popview(request):
     content=""
-    return render(request,"",{'content':content})
+    return render(request,"kindlebizy/about.html",{'content':content})
+
+def order(request):
+    queryset = Events.objects.all()
+
+    form=OrderForm(request.POST or None)
+    if form.is_valid():
+        instance = form.save(commit=False)
+        instance.save()
+        messages.success(request,"Thank you !!Order has been recieve")
+        return redirect('kindlebizy:Homepage')
+    content={"form":form,
+             "events":queryset}
+    return render(request,"kindlebizy/order.html",content)

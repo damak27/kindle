@@ -69,7 +69,7 @@ nav{
 nav li {
   display: inline-block;
   margin: 0 5px;
-  transition: all 0.3s;
+  transition: all 2s;
 
 }
 nav a {
@@ -541,6 +541,7 @@ button{
   display:block;
   visibility:initial;
 }
+
  @media only screen and (min-width:150px) and (max-width:680px) {
 
 
@@ -550,6 +551,19 @@ button{
   margin-top:28px;
   width: 80%;
   clear: both;
+}
+.forms{
+  padding: 5px;
+  border-radius: 10px;
+  margin-top:15px;
+  height: 40px;
+  width:200px;
+  margin-left:-20px;
+
+}
+button{
+  width:200px;
+  margin-left:-20px;
 }
     .logo{
       
@@ -587,5 +601,39 @@ color:white;
   font-size: 14px;
 
 
+}
+.aboutmobile{
+  width:90%;
+  height:auto;
+  clear: both;
+  background-color: white;
+  border-radius:10px;
+  padding:20px 20px 20px;
+  margin-top: 20px;
+  margin-left: 15px;
+}
+h1{
+  text-align: center;
+}
+.aboutmobile p{
+  font-size: 16px;
+}
+.foundermobile img{
+  margin-left: 15px;
+  width: 90%;
+  height: 200px;
+  clear: both;
+  border-radius: 10px;
+
+}
+  .gallery {
+  width: 100%;
+  
+  padding: 5px;
+
+  box-shadow: 0 1px 2px rgba(0,0,0,.3);
+}
+.galary{
+  margin-right: -120px;
 }
  }

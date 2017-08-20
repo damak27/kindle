@@ -1,12 +1,25 @@
 /* Smooth scrolling */
-$(document).on('click', 'a', function(event){
+$(document).on('click', '.about1', function(event){
     event.preventDefault();
 
     $('html, body').animate({
         scrollTop: $( $.attr(this, 'href') ).offset().top
     }, 500);
 }); 
+$(document).on('click', '.order1', function(event){
+    event.preventDefault();
 
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+}); 
+$(document).on('click', '.home1', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+}); 
     $(window).scroll(function() {
         if ($(this).scrollTop() > 390) {
            
